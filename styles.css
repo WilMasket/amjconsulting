@@ -601,7 +601,7 @@ button{font:inherit}
 @media (max-width: 768px) {
   .floating-card {
     animation: none; 
-  }}
+  }
 
   /* Update the menu background to a corporate green */
 .menu {
@@ -633,17 +633,20 @@ button{font:inherit}
     color: white;
 }
 
-@media (max-width: 768px) {
   .hero {
     padding-top: 34px;
     padding-bottom: 124px;
   }
 .hero h1{
-  font-size: 30px;
+  font-size: 48px;
   line-height: 1.05;
+  align-items: center;
+  text-align: center
+  ;
 }
   .hero-copy {
     margin-bottom: 16px;
+    text-align: center;
   }
 
   .hero-actions {
@@ -654,7 +657,7 @@ button{font:inherit}
   .hero-visual {
     margin-top: 20px;
   }
-  .eyebrow,
+ .eyebrow,
 .section-kicker {
   background-color: transparent;
   border: 1px solid #0eb30e;
@@ -666,5 +669,7 @@ button{font:inherit}
   display: inline-block;
   font-size: 12px;
   line-height: 1.2;
-  margin-bottom: 10px;
-}} 
+  margin: 0 auto 10px auto;
+  text-align: center;
+}
+}
