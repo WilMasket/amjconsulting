@@ -32,6 +32,9 @@ button{font:inherit}
   width:min(var(--container),calc(100% - 32px));
   margin:0 auto;
 }
+
+
+
 .header{
   position:sticky;
   top:0;
@@ -54,6 +57,11 @@ button{font:inherit}
   gap:12px;
   font-weight:800;
   color:var(--primary-2);
+}
+.brand-logo{
+  height: 50px;
+  width: auto;
+  display: block;
 }
 .brand-mark{
   width:14px;
@@ -202,12 +210,19 @@ button{font:inherit}
   background:linear-gradient(135deg,var(--primary),var(--accent));
   color:#ffffff;
   box-shadow:0 14px 30px rgba(47,107,70,.16);
+    font-weight:400 ;
 }
 .btn-primary:hover{transform:translateY(-2px)}
 .btn-secondary{
-  background:var(--surface);
-  border:1px solid var(--line);
-  color:var(--primary-2);
+  background: transparent;
+  border: 0px solid var(--line);
+  color: var(--primary-2);
+  gap: 8px;
+}
+
+.btn-secondary i{
+  width: 16px;
+  height: 16px;
 }
 .hero-visual{
   position:relative;
@@ -234,9 +249,16 @@ button{font:inherit}
   box-shadow:var(--shadow);
   max-width:300px;
 }
-.floating-card strong{display:block;color:var(--primary-2)}
-.floating-card span{color:var(--muted);font-size:.93rem}
-.floating-card i{color:var(--primary)}
+.floating-card,
+.floating-card * {
+  color: #fff !important;
+}
+
+.floating-card i,
+.floating-card svg {
+  stroke: #fff !important;
+  fill: #fff !important;
+}
 .section-head{
   max-width:820px;
   margin-bottom:26px;
@@ -494,4 +516,75 @@ button{font:inherit}
     flex-direction:column;
     align-items:flex-start;
   }
+  @media (max-width: 760px){
+  .hero-actions{
+    width:100%;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+  
 }
+
+}
+
+
+
+
+
+/* Hero button hover and focus effects */
+.hero-actions .btn {
+  transition: all 0.3s ease;
+}
+
+.hero-actions .btn-primary{
+  border-radius: 999px;
+}
+
+.hero-actions .btn-primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.14);
+  background: linear-gradient(135deg,var(--primary),var(--accent));
+}
+
+.btn-secondary:hover{
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.hero-actions .btn:focus {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+}
+/* Update the .floating-card class for glassmorphism and floating animation */
+.floating-card {
+  background: rgba(255, 255, 255, 0.1); /* Subtle transparent white background */
+  backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border for premium look */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Refined shadow */
+  animation: float 6s ease-in-out infinite; /* Subtle floating animation */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Keyframes for floating motion */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Hover state */
+.floating-card:hover {
+  opacity: 0.9; /* Slightly increase opacity */
+  transform: translateY(-5px); /* Raise the card */
+}
+
+/* Disable animation on mobile for subtlety */
+@media (max-width: 768px) {
+  .floating-card {
+    animation: none; /* Disable

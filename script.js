@@ -40,3 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", setActiveLink, { passive: true });
   setActiveLink();
 });
+
