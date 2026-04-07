@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const revealEls = document.querySelectorAll(".reveal");
   const sections = document.querySelectorAll("section[id]");
 
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-  });
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  }
 
   links.forEach(link => {
     link.addEventListener("click", () => {
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setActiveLink = () => {
     let current = "";
+
     sections.forEach(section => {
       if (window.scrollY >= section.offsetTop - 150) current = section.id;
     });
