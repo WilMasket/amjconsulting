@@ -632,3 +632,39 @@ button{font:inherit}
 .menu ul li a {
     color: white;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+.hero h1{
+  font-size: 40px;
+  line-height: 1.05;
+}
+  .hero-copy {
+    margin-bottom: 16px;
+  }
+
+  .hero-actions {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  .hero-visual {
+    margin-top: 20px;
+  }
+  .eyebrow,
+.section-kicker {
+  background-color: transparent;
+  border: 1px solid #0eb30e;
+  border-radius: 50px;
+  color: #0eb30e;
+  font-weight: 300;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
