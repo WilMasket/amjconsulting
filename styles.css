@@ -117,7 +117,7 @@ button{font:inherit}
   line-height:1.02;
   letter-spacing:-.05em;
   margin:0 0 18px;
-  color: var(--primary-2);
+  color: var(--primary-2); 
 }
 .eyebrow,
 .section-kicker{
