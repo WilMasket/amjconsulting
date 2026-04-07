@@ -227,7 +227,7 @@ button{font:inherit}
 .btn-secondary{
   background: transparent;
   border: 0px solid var(--line);
-  color: #2f6b46
+  color: #2f6b46;
   gap: 8px;
 }
 
@@ -635,11 +635,11 @@ button{font:inherit}
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 34px;
+    padding-bottom: 124px;
   }
 .hero h1{
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.05;
 }
   .hero-copy {
@@ -667,4 +667,4 @@ button{font:inherit}
   font-size: 12px;
   line-height: 1.2;
   margin-bottom: 10px;
-}
+}} 
