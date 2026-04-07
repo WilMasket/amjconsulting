@@ -75,7 +75,7 @@ button{font:inherit}
   align-items:center;
   gap:22px;
   color:var(--muted);
-  font-weight:600;
+  font-weight:500;
 }
 .menu a{transition:.2s ease}
 .menu a:hover{color:var(--primary)}
@@ -117,15 +117,15 @@ button{font:inherit}
   line-height:1.02;
   letter-spacing:-.05em;
   margin:0 0 18px;
-  color:var(--text);
+  color: var(--primary-2);
 }
 .eyebrow,
 .section-kicker{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  color:var(--primary);
-  font-weight:800;
+  color: #1e963a;
+  font-weight:300;
   text-transform:uppercase;
   letter-spacing:.18em;
   font-size:.78rem;
@@ -179,7 +179,7 @@ button{font:inherit}
 }
 .metric strong{
   display:block;
-  font-size:1.4rem;
+  font-size:1.8rem;
   color:var(--primary-2);
 }
 .metric span,
@@ -187,7 +187,7 @@ button{font:inherit}
 .logo-card span,
 .timeline-item span{
   color:var(--muted);
-  font-size:.94rem;
+  font-size:.84rem;
 }
 .hero-actions{
   display:flex;
@@ -587,4 +587,7 @@ button{font:inherit}
 /* Disable animation on mobile for subtlety */
 @media (max-width: 768px) {
   .floating-card {
-    animation: none; /* Disable
+    animation: none; 
+  }}
+
+  
