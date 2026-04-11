@@ -19,9 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
     });
-  }, { threshold: 0.12 });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px"
+  });
 
   revealEls.forEach(el => io.observe(el));
 
@@ -29,7 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let current = "";
 
     sections.forEach(section => {
-      if (window.scrollY >= section.offsetTop - 150) current = section.id;
+      if (window.scrollY >= section.offsetTop - 160) {
+        current = section.id;
+      }
     });
 
     links.forEach(link => {
@@ -38,6 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   window.addEventListener("scroll", setActiveLink, { passive: true });
+  window.addEventListener("resize", setActiveLink);
   setActiveLink();
-});
 
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    revealEls.forEach(el => el.classList.add("visible"));
+  }
+});
