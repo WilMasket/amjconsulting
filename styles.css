@@ -483,6 +483,7 @@ button{font:inherit}
   }
   .menu-btn{
     display:inline-flex;
+    color: #000000;
   }
   .menu{
     position:absolute;
@@ -491,13 +492,14 @@ button{font:inherit}
     left:0;
     display:none;
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
     gap:14px;
     padding:18px;
-    background:rgba(0,0,0,.96);
+    background:rgb(255, 255, 255);
     border:1px solid rgba(255,255,255,.08);
     border-radius:20px;
     box-shadow:var(--shadow);
+    color: #000000;
   }
   .menu.open{
     display:flex;
